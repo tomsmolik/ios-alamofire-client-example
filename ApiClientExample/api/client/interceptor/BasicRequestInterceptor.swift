@@ -9,13 +9,15 @@ class BasicRequestInterceptor: RequestInterceptor {
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var adaptedRequest = urlRequest
-        let authorization = basicCredentials(username: Api.CLIENT_ID, password: Api.CLIENT_SECRET)
-        adaptedRequest.setValue("Basic \(authorization)", forHTTPHeaderField: "Authorization")
+        adaptedRequest.setValue("Basic \(basicCredentials())", forHTTPHeaderField: "Authorization")
         completion(.success(adaptedRequest))
     }
     
-    private func basicCredentials(username: String, password: String) -> String {
-        return String(format: "%@:%@", username, password)
+    private func basicCredentials() -> String {
+        let clientId = Bundle.main.object(forInfoDictionaryKey: "API_CLIENT_ID") as! String
+        let clientSecret = Bundle.main.object(forInfoDictionaryKey: "API_CLIENT_SECRET") as! String
+        
+        return String(format: "%@:%@", clientId, clientSecret)
             .data(using: String.Encoding.utf8)!
             .base64EncodedString()
     }

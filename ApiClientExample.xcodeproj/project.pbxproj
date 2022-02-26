@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		63A44F8C170D7CCDDCA58B51 /* Pods_ApiClientExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiClientExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC7CB6D7841F596D1790804 /* Pods-ApiClientExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiClientExample.debug.xcconfig"; path = "Target Support Files/Pods-ApiClientExample/Pods-ApiClientExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C30BF7C927CA76E300B3778B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C340F55D27CA421C00AE1D51 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		C340F56027CA429F00AE1D51 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C340F56127CA429F00AE1D51 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 				C340F57727CA520D00AE1D51 /* util */,
 				C38E353527CA346E002D7381 /* ApiClientExampleApp.swift */,
 				C38E353927CA346F002D7381 /* Assets.xcassets */,
+				C30BF7C927CA76E300B3778B /* Info.plist */,
 				C38E353B27CA346F002D7381 /* Preview Content */,
 			);
 			path = ApiClientExample;
@@ -409,6 +411,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "http://127.0.0.1:8401/";
+				API_CLIENT_ID = client;
+				API_CLIENT_SECRET = client;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -470,6 +475,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "http://127.0.0.1:8401/";
+				API_CLIENT_ID = client;
+				API_CLIENT_SECRET = client;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -533,6 +541,7 @@
 				DEVELOPMENT_TEAM = 645J7KNRW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApiClientExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -564,6 +573,7 @@
 				DEVELOPMENT_TEAM = 645J7KNRW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApiClientExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

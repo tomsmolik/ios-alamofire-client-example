@@ -55,7 +55,8 @@ final class Client: ClientProtocol {
 extension Client {
     
     private func url(path: String) -> URL {
-        return URL(string: Api.BASE_URL)!.appendingPathComponent(path)
+        let baseUrl = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as! String
+        return URL(string: baseUrl)!.appendingPathComponent(path)
     }
 }
 
