@@ -1,4 +1,4 @@
-# iOS - Alamofire REST Client example
+# iOS - Swift - Alamofire REST Client example
 
 Example of simple OAuth2 authentication using Alamofire and RxSwift library.
 
